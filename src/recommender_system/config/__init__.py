@@ -1,0 +1,1 @@
+from recommender_system.config.configuration import ConfigurationManager

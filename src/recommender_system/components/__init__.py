@@ -1,0 +1,1 @@
+from recommender_system.components.data_ingestion import DataIngestion
