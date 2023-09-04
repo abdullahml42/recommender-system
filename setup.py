@@ -1,6 +1,5 @@
 import setuptools
 
-
 setuptools.setup(
     name="recommender_system",
     version="0.0.0",
