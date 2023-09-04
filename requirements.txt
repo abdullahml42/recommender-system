@@ -1,0 +1,16 @@
+ensure==1.0.3
+Flask==2.3.3
+jupyterlab==4.0.5
+keras==2.13.1
+matplotlib==3.7.2
+numpy==1.24.2
+pandas==2.0.3
+PyYAML==6.0.1
+python-box==7.0.1
+scikit-learn==1.3.0
+streamlit==1.26.0
+tensorflow==2.13.0
+tqdm==4.66.1
+types-PyYAML==6.0.12.11
+
+-e .
