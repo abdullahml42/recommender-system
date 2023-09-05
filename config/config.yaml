@@ -5,3 +5,7 @@ data_ingestion:
   source_url: https://jmcauley.ucsd.edu/data/amazon_v2/categoryFilesSmall/Industrial_and_Scientific_5.json.gz
   local_data_file_path: artifacts/data_ingestion/data.gz
   unzip_directory: artifacts/data_ingestion
+
+data_preprocessing:
+  root_dir: artifacts/data_preprocessing
+  data_path: artifacts/data_ingestion/data.json
