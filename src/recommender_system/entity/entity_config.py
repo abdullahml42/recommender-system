@@ -9,3 +9,10 @@ class DataIngestionConfig:
     source_url: str
     local_data_file_path: Path
     unzip_directory: Path
+
+
+@dataclass(frozen=True)
+class DataPreprocessingConfig:
+    """Represents the configuration for data preprocessing."""
+    root_dir: Path
+    data_path: Path

@@ -1,7 +1,11 @@
 from recommender_system.logging import logger
-from recommender_system.pipeline import DataIngestionPipeline
+from recommender_system.pipeline import (DataIngestionPipeline,
+                                         DataPreprocessingPipeline)
 
-pipeline_configs = [("Data Ingestion", DataIngestionPipeline())]
+pipeline_configs = [
+    ("Data Ingestion", DataIngestionPipeline()),
+    ("Data Preprocessing", DataPreprocessingPipeline())
+]
 
 for stage_name, pipeline in pipeline_configs:
     try:

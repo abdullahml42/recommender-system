@@ -1,1 +1,2 @@
 from recommender_system.components.data_ingestion import DataIngestion
+from recommender_system.components.data_preprocessing import DataPreprocessor
