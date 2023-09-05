@@ -1,0 +1,1 @@
+from recommender_system.pipeline.stage_01_data_ingestion import DataIngestionPipeline

@@ -1,5 +1,5 @@
 from recommender_system.logging import logger
-from recommender_system.pipeline.stage_01_data_ingestion import DataIngestionPipeline
+from recommender_system.pipeline import DataIngestionPipeline
 
 pipeline_configs = [("Data Ingestion", DataIngestionPipeline())]
 
