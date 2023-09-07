@@ -27,3 +27,16 @@ class ModelConfig:
     number_of_products: int
     number_of_dimensions: int
     learning_rate: float
+
+
+@dataclass(frozen=True)
+class TrainModelConfig:
+    """Represents the configuration for training the model."""
+    root_dir: Path
+    base_model_path: Path
+    trained_model_path: Path
+    data_path: Path
+    batch_size: int
+    epochs: int
+    verbose: int
+    

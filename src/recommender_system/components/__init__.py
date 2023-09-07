@@ -1,3 +1,4 @@
 from recommender_system.components.build_model import ModelBuilder
 from recommender_system.components.data_ingestion import DataIngestion
 from recommender_system.components.data_preprocessing import DataPreprocessor
+from recommender_system.components.train_model import ModelTrainer

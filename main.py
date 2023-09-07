@@ -1,12 +1,14 @@
 from recommender_system.logging import logger
 from recommender_system.pipeline import (DataIngestionPipeline,
                                          DataPreprocessingPipeline,
-                                         ModelBuilderPipeline)
+                                         ModelBuilderPipeline,
+                                         ModelTrainerPipeline)
 
 pipeline_configs = [
     ("Data Ingestion", DataIngestionPipeline()),
     ("Data Preprocessing", DataPreprocessingPipeline()),
-    ("Build Model", ModelBuilderPipeline())
+    ("Build Model", ModelBuilderPipeline()),
+    ("Train Model", ModelTrainerPipeline())
 ]
 
 for stage_name, pipeline in pipeline_configs:

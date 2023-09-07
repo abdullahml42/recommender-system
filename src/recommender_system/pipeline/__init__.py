@@ -4,3 +4,5 @@ from recommender_system.pipeline.stage_02_data_preprocessing import \
     DataPreprocessingPipeline
 from recommender_system.pipeline.stage_03_build_model import \
     ModelBuilderPipeline
+from recommender_system.pipeline.stage_04_train_model import \
+    ModelTrainerPipeline

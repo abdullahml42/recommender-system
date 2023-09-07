@@ -3,7 +3,8 @@ from pathlib import Path
 
 from recommender_system.constants import CONFIG_FILE_PATH, PARAMS_FILE_PATH
 from recommender_system.entity import (DataIngestionConfig,
-                                       DataPreprocessingConfig, ModelConfig)
+                                       DataPreprocessingConfig, ModelConfig,
+                                       TrainModelConfig)
 from recommender_system.utils import create_directories, read_yaml
 
 
@@ -56,3 +57,22 @@ class ConfigurationManager:
         )
 
         return build_model_config
+
+    def get_train_model_config(self) -> TrainModelConfig:
+        """Returns the model training configuration."""
+        base_model_config = self.config.build_model
+        train_model_config = self.config.train_model
+        data_config = self.config.data_preprocessing
+        create_directories([train_model_config.root_dir])
+
+        train_model_config = TrainModelConfig(
+            root_dir=Path(train_model_config.root_dir),
+            base_model_path=Path(base_model_config.model_path),
+            trained_model_path=Path(train_model_config.trained_model_path),
+            data_path=Path(data_config.root_dir),
+            batch_size=self.params.BATCH_SIZE,
+            epochs=self.params.EPOCHS,
+            verbose=self.params.VERBOSE
+        )
+
+        return train_model_config
