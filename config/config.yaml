@@ -13,3 +13,7 @@ data_preprocessing:
 build_model:
   root_dir: artifacts/build_model
   model_path: artifacts/build_model/base_model.h5
+
+train_model:
+  root_dir: artifacts/train_model
+  trained_model_path: artifacts/train_model/trained_model.h5
