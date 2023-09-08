@@ -6,3 +6,5 @@ from recommender_system.pipeline.stage_03_build_model import \
     ModelBuilderPipeline
 from recommender_system.pipeline.stage_04_train_model import \
     ModelTrainerPipeline
+from recommender_system.pipeline.stage_05_evaluate_model import \
+    ModelEvaluationPipeline

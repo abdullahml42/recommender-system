@@ -40,3 +40,14 @@ class TrainModelConfig:
     epochs: int
     verbose: int
     
+
+@dataclass(frozen=True)
+class EvaluateModelConfig:
+    """Represents the configuration for evaluating the model."""
+    root_dir: Path
+    trained_model_path: Path
+    data_path: Path
+    min_rating: float
+    max_rating: float
+    verbose: int
+    

@@ -3,7 +3,8 @@ from pathlib import Path
 
 from recommender_system.constants import CONFIG_FILE_PATH, PARAMS_FILE_PATH
 from recommender_system.entity import (DataIngestionConfig,
-                                       DataPreprocessingConfig, ModelConfig,
+                                       DataPreprocessingConfig,
+                                       EvaluateModelConfig, ModelConfig,
                                        TrainModelConfig)
 from recommender_system.utils import create_directories, read_yaml
 
@@ -76,3 +77,21 @@ class ConfigurationManager:
         )
 
         return train_model_config
+
+    def get_evaluate_model_config(self) -> EvaluateModelConfig:
+        """Returns the model evaluation configuration."""
+        config = self.config.evaluate_model
+        trained_model_path = self.config.train_model.trained_model_path
+        data_path = self.config.data_preprocessing.root_dir
+        create_directories([config.root_dir])
+
+        evaluate_model_config = EvaluateModelConfig(
+            root_dir=Path(config.root_dir),
+            trained_model_path=Path(trained_model_path),
+            data_path=Path(data_path),
+            min_rating=self.params.MIN_RATING,
+            max_rating=self.params.MAX_RATING,
+            verbose=self.params.VERBOSE
+        )
+
+        return evaluate_model_config
