@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Recommender System</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Industrial and Scientific Product Recommender System</h1><br>
+        <div class="form-container">
+            <div class="input-container">
+                <label for="reviewer-id">Enter User ID:</label>
+                <input type="text" id="reviewer-id" placeholder="User ID">
+                <div id="user-id-suggestions" class="suggestions"></div>
+            </div>
+            <div class="input-container">
+                <label for="num-items">Enter Number of Items:</label>
+                <input type="text" id="num-items" placeholder="Number of Items">
+                <div id="num-items-suggestions" class="suggestions"></div>
+            </div>
+            <button id="recommend-button">Recommend Products</button>
+        </div>
+        <div id="recommendations-container" style="display: none;">
+            <table id="recommendations-table">
+                <thead>
+                    <tr>
+                        <th>Product ID</th>
+                        <th>Predicted Rating</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+
+</html>
