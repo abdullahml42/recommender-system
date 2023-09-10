@@ -8,3 +8,4 @@ from recommender_system.pipeline.stage_04_train_model import \
     ModelTrainerPipeline
 from recommender_system.pipeline.stage_05_evaluate_model import \
     ModelEvaluationPipeline
+from recommender_system.pipeline.stage_06_inference import RecommendProducts
